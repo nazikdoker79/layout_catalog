@@ -2,32 +2,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: $header-padding;
   text-transform: uppercase;
 
   &__logo-image {
     display: block;
   }
 
-  &__nav {
-    &-list {
-      display: flex;
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    &-item:not(:first-child) {
-      margin-left: 20px;
-    }
+  &__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
   }
 
-  &__nav-link {
+  &__item:not(:first-child) {
+    margin-left: $header-link-gap;
+  }
+
+  &__link {
     display: flex;
     align-items: center;
     color: $main-text-color;
     text-decoration: none;
-    height: 60px;
+    height: $header-link-height;
+    line-height: 100%;
 
     @include main-transition;
 
@@ -38,17 +37,15 @@
     &.is-active {
       color: $link-color;
       position: relative;
-      display: flex;
-      align-items: center;
 
       &::after {
         content: '';
         position: absolute;
         bottom: 0;
         background-color: $link-color;
-        height: 4px;
+        height: $active-link-line-height;
         width: 100%;
-        border-radius: 8px;
+        border-radius: $active-link-line-radius;
       }
     }
   }
