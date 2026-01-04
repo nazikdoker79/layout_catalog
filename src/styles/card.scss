@@ -1,6 +1,6 @@
 .card {
   box-sizing: border-box;
-  width: 200px;
+  width: $card-width;
   border: 1px solid $card-border-color;
   border-radius: 5px;
   padding: 16px;

@@ -5,15 +5,17 @@
   padding: 0 50px;
   text-transform: uppercase;
 
-  &___logo-image {
+  &__logo-image {
     display: block;
   }
 
-  &__nav-list {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+  &__nav {
+    &-list {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
 
     &-item:not(:first-child) {
       margin-left: 20px;
@@ -27,27 +29,27 @@
     text-decoration: none;
     height: 60px;
 
-    &:hover {
-      @include main-transition;
+    @include main-transition;
 
+    &:hover {
       color: $link-color;
     }
-  }
 
-  .is-active {
-    color: $link-color;
-    position: relative;
-    display: flex;
-    align-items: center;
+    &.is-active {
+      color: $link-color;
+      position: relative;
+      display: flex;
+      align-items: center;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      background-color: $link-color;
-      height: 4px;
-      width: 100%;
-      border-radius: 8px;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        background-color: $link-color;
+        height: 4px;
+        width: 100%;
+        border-radius: 8px;
+      }
     }
   }
 }

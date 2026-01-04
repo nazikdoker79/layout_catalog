@@ -5,9 +5,9 @@
     background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 4px;
-    width: 16px;
-    height: 16px;
+    margin-right: $star-gap;
+    width: $star-size;
+    height: $star-size;
 
     &:last-child {
       margin-right: 0;
